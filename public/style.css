@@ -1,0 +1,150 @@
+@keyframes changeColor {
+  50% {
+    color: grey;
+  }
+  10% {
+    color: blue;
+  }
+  100% {
+    color: red;
+  }
+  10% {
+    color: green;
+  }
+}
+
+a {
+  animation: changeColor 1s infinite;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+input {
+  font-family: Courier New;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  word-wrap: break-word;
+}
+
+/* Pages */
+.pages {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.page {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* Login Page */
+.login.page {
+  background-color: black;
+}
+
+.login.page .form {
+  height: 100px;
+  margin-top: -50px; /* Adjusted for mobile */
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+
+.login.page .form .usernameInput {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+  padding-bottom: 10px; /* Adjusted for mobile */
+  text-align: center;
+  width: 80%; /* Adjusted for mobile */
+  max-width: 400px; /* Adjusted for mobile */
+  font-size: 4vw; /* Adjusted for mobile */
+  color: #c8ff00; /* Neon color */
+  font-weight: 700; /* Change to your desired font weight */
+}
+
+.login.page .title,
+.login.page .usernameInput {
+  font-size: 4vw; /* Adjusted for mobile */
+  color: #c8ff00; /* Neon color */
+  font-weight: 700; /* Change to your desired font weight */
+}
+
+/* Chat page */
+.chat.page {
+  display: none;
+}
+
+/* Font */
+.messages {
+  font-size: 2.5vw; /* Adjusted for mobile */
+}
+
+.inputMessage {
+  font-size: 2vw; /* Adjusted for mobile */
+}
+
+.log {
+  color: gray;
+  font-size: 1.5vw; /* Adjusted for mobile */
+  margin: 5px;
+  text-align: center;
+}
+
+/* Messages */
+.chatArea {
+  background-color: black;
+  color: #c8ff00; 
+  height: 100%;
+  padding-bottom: 20vw; /* Adjusted for mobile */
+}
+
+.message.typing .messageBody {
+  color: white;
+}
+
+/* Messages */
+.messages {
+  color: #c8ff00; /* Change color to #ff2277 */
+  height: 100%;
+  margin: 0 10px; /* Add margin */
+  overflow-y: scroll;
+  padding: 2vw 4vw 2vw 4vw; /* Adjusted for mobile */
+}
+
+/* Input */
+.inputMessage {
+  border: 1vw solid #000; /* Adjusted for mobile */
+  bottom: 0;
+  height: 10vw; /* Adjusted for mobile */
+  left: 0;
+  outline: none;
+  padding-left: 2vw; /* Adjusted for mobile */
+  position: absolute;
+  right: 0;
+  width: 100%;
+  font-size: 2vw; /* Adjusted for mobile */
+  color: #000; /* Neon color */
+  font-weight: 700; /* Change to your desired font weight */
+}
