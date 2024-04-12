@@ -11,13 +11,12 @@
       <div class="chatArea">
         <ul class="messages"></ul>
       </div>
-      <input class="inputMessage" placeholder="Enter text here..."/>
+      <input class="inputMessage" placeholder="Enter text here..." />
     </li>
     <li class="login page">
       <div class="form">
         <h3 class="title">$username</h3>
-       <p><a href="https://sudo-chat.glitch.me" style="color: grey; text-decoration: none;">sudo-chat.glitch.me</a></p>
-
+        <p><a href="https://sudo-chat.glitch.me" style="color: grey; text-decoration: none;">sudo-chat.glitch.me</a></p>
         </p>
         <input class="usernameInput" type="text" maxlength="14" />
       </div>
@@ -27,5 +26,29 @@
   <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="/main.js"></script>
+  <script>
+    $(function() {
+      var socket = io();
+
+      // Function to send a message
+      function sendMessage() {
+        var $inputMessage = $('.inputMessage');
+        var message = $inputMessage.val();
+        if (message.trim() !== '') {
+          socket.emit('new message', message);
+          $inputMessage.val('');
+        }
+      }
+
+      // Handling Enter key press to send a message
+      $('.inputMessage').keypress(function(event) {
+        if (event.which === 13) {
+          event.preventDefault();
+          sendMessage();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
+
